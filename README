@@ -1,0 +1,14 @@
+Please Check this file before loading xt_OBSF
+
+Please remember:
+1. Although the module apparently does not crash, it may crash while unloading, so give the server time to stop all
+   communications and then unload the module. And the remote rebooting option must be available.
+
+2. If the module is loaded on VM, the code should work as presented. But if it is on a REAL MACHINE, please comment out
+   udp4_hwcsum() functions in xt_OBSF.c. Comment out the lines in which udp4_hwcsum() is called.
+
+Requirements:
+1. iptables version minimum 1.4.12
+2. Package iptables-dev(el)
+3. In CentOS, the kernel version is older and iptables latest version must be installed manually along with iptables-devel.
+   Preferably, Ubuntu server can be used, there these things are of satisfactorily upgrade version.
